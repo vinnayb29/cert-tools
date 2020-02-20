@@ -40,7 +40,12 @@ def instantiate_assertion(cert, uid, issued_on):
 
 
 def instantiate_recipient(cert, recipient, additional_fields, hash_emails):
-
+    if cert['displayHtml']:
+        cert['displayHtml'] ="""<section class="text" style="margin-top: 24px; width: 100%; display: inline-block;"><span style="display: block; font-family: Helvetica, sans-serif; font-weight: bold; font-size: 2.5em; text-align: left; text-transform: none; color: #4e5f6b; margin: 0 auto; width: 100%;"><img style="display: block; margin-left: auto; margin-right: auto;" src="https://upload.wikimedia.org/wikipedia/commons/3/39/ETS_Logo.svg" alt="" width="120" height="88" /></span></section>
+                                <h4 class="text" style="margin-top: 24px; width: 100%; display: inline-block;"><span style="font-size: 2.5em;"><em><span style="display: block; font-family: Helvetica, sans-serif; font-weight: bold; text-align: center; text-transform: none; color: #4e5f6b; margin: 0px auto; width: 100%;">Certificate of participation</span></em></span></h4>
+                                <section class="text" style="margin-top: 24px; width: 100%; display: inline-block;"><span style="display: block; font-family: Helvetica, sans-serif; font-weight: bold; font-size: 2.5em; text-align: center; text-transform: none; color: #4e5f6b; margin: 0 auto; width: 100%;">"""+recipient.name+"""</span></section><h3 class="text" style="margin-top: 24px; width: 100%; display: inline-block;"><span style="display: block; font-family: Helvetica, sans-serif; font-size: 1em; text-align: center; text-transform: none; color: #4e5f6b; margin: 0px auto; width: 100%;">Blockchain based ETS Credentials</span></h3>
+                                <section class="text" style="margin-top: 24px; width: 100%; display: inline-block;"></section><blockquote><p style="text-align: center;"><em>This certificate describes the use case of blockchain-based ETS credential</em></p><p style="text-align: center;">&nbsp;</p></blockquote>"""
+     
     if hash_emails:
         salt = helpers.encode(os.urandom(16))
         cert['recipient']['hashed'] = True
