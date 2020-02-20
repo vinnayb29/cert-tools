@@ -20,7 +20,8 @@ see example of certificate template and batch creation in sample_data
   ```bash
   pip install .
   ```
-
+4. Go to sample_data/roasters 
+ 
 ## Scripts
 
 The cert-tools setup script installs 2 scripts, which are described below:
