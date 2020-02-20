@@ -12,7 +12,7 @@ see example of certificate template and batch creation in sample_data
 2. Git clone the repository and change to the directory
 
   ```bash
-  git clone https://github.com/vinnayb29/ets-blockcerts.git && cd cert-tools
+  git clone https://github.com/vinnayb29/blockcerts-cert-tools.git && cd cert-tools
   ```
 
 3. Run the setup script
