@@ -20,7 +20,7 @@ see example of certificate template and batch creation in sample_data
   ```bash
   pip install .
   ```
-4. Go to sample_data/roasters 
+4. Go to sample_data/roasters in cert-tools folder and edit the roster_testnet.csv
  
 ## Scripts
 
